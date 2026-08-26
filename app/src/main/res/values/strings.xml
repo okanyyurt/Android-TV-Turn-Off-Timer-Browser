@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TV Kapanma Zamanlayıcısı</string>
+    <string name="accessibility_service_description">Bu servis, süre dolduğunda otomatik olarak cihazınızı kapatmak için Güç menüsünü tetikler.</string>
+</resources>
