@@ -2,216 +2,195 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="#0E1116"
     android:fillViewport="true">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        
-        <!-- İzinler Butonu (Sağ Üst Köşe) -->
-        <Button
-            android:id="@+id/btnPerms"
-            android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_margin="4dp"
-            android:text="İzinler"
-            android:textSize="10sp"
-            android:backgroundTint="#444444"
-            android:textColor="#FFFFFF" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="32dp"
+        android:paddingTop="16dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="24dp">
 
+        <!-- Sayaç kartı + sağ üstte ayarlar (dişli) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:padding="4dp">
+            android:background="@drawable/bg_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="18dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TV Kapanma Zamanlayıcısı"
-                android:textSize="20sp"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:id="@+id/tvCountdown"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sayaç: 00:00:00"
-                android:textSize="28sp"
-                android:textColor="#03DAC5"
-                android:textStyle="bold"
-                android:layout_marginBottom="12dp" />
-
-            <Button
-                android:id="@+id/btnLaunchBrowser"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="▶ YouTube Aç (Tarayıcı)"
-                android:backgroundTint="#FF0000"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_marginBottom="12dp" />
-
-            <!-- Hızlı Süre Butonları -->
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginBottom="8dp">
-                
-                <Button
-                    android:id="@+id/btn15m"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="15 Dk"
-                    android:textSize="14sp"
-                    android:layout_margin="2dp" />
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/btn30m"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="30 Dk"
-                    android:textSize="14sp"
-                    android:layout_margin="2dp" />
-
-                <Button
-                    android:id="@+id/btn1h"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1 Saat"
-                    android:textSize="14sp"
-                    android:layout_margin="2dp" />
-
-                <Button
-                    android:id="@+id/btn3h"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3 Saat"
-                    android:textSize="14sp"
-                    android:layout_margin="2dp" />
-            </LinearLayout>
-
-            <!-- Özel Süre Ayarı (+ / -) -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginBottom="8dp">
-
-                <Button
-                    android:id="@+id/btnMinus"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="-"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_margin="4dp" />
-
-                <EditText
-                    android:id="@+id/etCustomMinutes"
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:text="45"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:inputType="number"
-                    android:imeOptions="flagNoExtractUi"
-                    android:layout_margin="4dp" />
-                    
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dk"
-                    android:textColor="#AAAAAA"
-                    android:textSize="16sp"
-                    android:layout_marginEnd="8dp" />
+                    android:text="TV KAPANMA ZAMANLAYICISI"
+                    android:textColor="#8A94A6"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/btnPlus"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="+"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_margin="4dp" />
-
-                <Button
-                    android:id="@+id/btnStartCustom"
+                <TextView
+                    android:id="@+id/tvCountdown"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Özel Başlat"
-                    android:textSize="14sp"
-                    android:layout_marginStart="8dp" />
+                    android:text="Kapalı"
+                    android:textColor="#03DAC5"
+                    android:textSize="42sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#AAB4C3"
+                    android:textSize="13sp" />
             </LinearLayout>
 
-            <!-- Karartma Ayarları -->
+            <Button
+                android:id="@+id/btnExtend"
+                style="@style/TvButton.Primary"
+                android:text="+15 dk" />
+
+            <Button
+                android:id="@+id/btnStop"
+                style="@style/TvButton.Danger"
+                android:text="İptal" />
+
+            <ImageButton
+                android:id="@+id/btnSettings"
+                style="@style/TvButton"
+                android:layout_gravity="top"
+                android:layout_marginLeft="12dp"
+                android:contentDescription="Ayarlar"
+                android:padding="10dp"
+                android:src="@drawable/ic_settings"
+                android:tint="@color/btn_tv_text" />
+        </LinearLayout>
+
+        <!-- Süre -->
+        <TextView
+            style="@style/SectionTitle"
+            android:text="SÜRE" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginBottom="4dp">
-
-                <Switch
-                    android:id="@+id/switchDim"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ekranı Karart"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp" />
-
-                <Button
-                    android:id="@+id/btnCycleDim"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:text="Kararma: Sadece Sonda"
-                    android:textSize="12sp"
-                    android:backgroundTint="#444444"
-                    android:textColor="#FFFFFF" />
-            </LinearLayout>
-            
-            <Switch
-                android:id="@+id/switchIdleDim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hareketsizlikte 1 Dk Sonra Karart"
-                android:textColor="#AAAAAA"
-                android:textSize="12sp"
-                android:layout_marginBottom="8dp" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <!-- İptal -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginBottom="4dp">
+                <Button android:id="@+id/btn15" style="@style/TvButton" android:text="15 dk" />
+                <Button android:id="@+id/btn30" style="@style/TvButton" android:text="30 dk" />
+                <Button android:id="@+id/btn45" style="@style/TvButton" android:text="45 dk" />
+                <Button android:id="@+id/btn60" style="@style/TvButton" android:text="1 saat" />
+                <Button android:id="@+id/btn90" style="@style/TvButton" android:text="1,5 saat" />
+                <Button android:id="@+id/btn120" style="@style/TvButton" android:text="2 saat" />
 
-                <Button
-                    android:id="@+id/btnStop"
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#2E3640" />
+
+                <Button android:id="@+id/btnMinus" style="@style/TvButton" android:text="−" />
+
+                <TextView
+                    android:id="@+id/tvCustom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sayacı İptal Et"
-                    android:backgroundTint="#B00020"
+                    android:gravity="center"
+                    android:minWidth="72dp"
+                    android:text="45 dk"
                     android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:layout_margin="2dp" />
-            </LinearLayout>
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-        </LinearLayout>
-    </RelativeLayout>
+                <Button android:id="@+id/btnPlus" style="@style/TvButton" android:text="+" />
+                <Button android:id="@+id/btnStartCustom" style="@style/TvButton.Primary" android:text="Başlat" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Her gün belirli saatte -->
+        <TextView
+            style="@style/SectionTitle"
+            android:text="HER GÜN BELİRLİ SAATTE KAPAT" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button android:id="@+id/btnSchedule" style="@style/TvButton" android:text="Kapalı" />
+                <Button android:id="@+id/btnHourMinus" style="@style/TvButton" android:text="−1 sa" />
+
+                <TextView
+                    android:id="@+id/tvScheduleTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minWidth="84dp"
+                    android:text="01:00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <Button android:id="@+id/btnHourPlus" style="@style/TvButton" android:text="+1 sa" />
+                <Button android:id="@+id/btnMinuteMinus" style="@style/TvButton" android:text="−5 dk" />
+                <Button android:id="@+id/btnMinutePlus" style="@style/TvButton" android:text="+5 dk" />
+
+                <TextView
+                    android:id="@+id/tvScheduleInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dp"
+                    android:textColor="#AAB4C3"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- İzle -->
+        <TextView
+            style="@style/SectionTitle"
+            android:text="İZLE  —  zamanlayıcı hangi uygulamayı açarsanız açın çalışır" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/appsRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tvShortcutHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="4dp"
+            android:textColor="#6B7380"
+            android:textSize="13sp" />
+    </LinearLayout>
 </ScrollView>

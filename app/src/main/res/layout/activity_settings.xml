@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0E1116"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="32dp"
+        android:paddingTop="16dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="Ayarlar"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Genel ayarlar -->
+        <TextView
+            style="@style/SectionTitle"
+            android:text="GENEL" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <Button android:id="@+id/btnDim" style="@style/TvButton.Grid" />
+            <Button android:id="@+id/btnEndAction" style="@style/TvButton.Grid" />
+            <Button android:id="@+id/btnIndicator" style="@style/TvButton.Grid" />
+            <Button android:id="@+id/btnBarPos" style="@style/TvButton.Grid" />
+            <Button android:id="@+id/btnFade" style="@style/TvButton.Grid" />
+            <Button android:id="@+id/btnWarn" style="@style/TvButton.Grid" />
+            <Button android:id="@+id/btnIdleDim" style="@style/TvButton.Grid" />
+            <Button android:id="@+id/btnShortcut" style="@style/TvButton.Grid" />
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/tvShortcutInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:textColor="#8A94A6"
+            android:textSize="13sp" />
+
+        <!-- Kapatma yöntemleri -->
+        <TextView
+            style="@style/SectionTitle"
+            android:text="KAPATMA YÖNTEMLERİ VE İZİNLER" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout style="@style/PermRow">
+                <TextView android:id="@+id/tvOverlayStatus" style="@style/PermText" />
+                <Button android:id="@+id/btnOverlay" style="@style/TvButton" android:text="Ayarı aç" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/PermRow">
+                <TextView android:id="@+id/tvAccessStatus" style="@style/PermText" />
+                <Button android:id="@+id/btnAccess" style="@style/TvButton" android:text="Ayarı aç" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/PermRow">
+                <TextView android:id="@+id/tvAdminStatus" style="@style/PermText" />
+                <Button android:id="@+id/btnAdmin" style="@style/TvButton" android:text="Etkinleştir" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRootStatus"
+                style="@style/PermText"
+                android:layout_width="match_parent"
+                android:layout_weight="0"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvChain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnTest"
+                style="@style/TvButton.Primary"
+                android:layout_gravity="start"
+                android:text="10 saniyelik test zamanlayıcısı" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAdb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card_focus"
+            android:focusable="true"
+            android:fontFamily="monospace"
+            android:padding="16dp"
+            android:textColor="#8A94A6"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

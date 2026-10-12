@@ -10,28 +10,55 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <!-- Sayfadaki video "tam ekran" yapılınca -->
+    <FrameLayout
+        android:id="@+id/fullscreenContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:visibility="gone" />
+
+    <!-- Kademeli karartma / hareketsizlik karartması (dokunmayı engellemez) -->
+    <View
+        android:id="@+id/dimLayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
     <TextView
         android:id="@+id/tvBrowserCountdown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|end"
-        android:layout_margin="16dp"
-        android:padding="8dp"
-        android:text="00:00:00"
-        android:textColor="#00FF00"
-        android:shadowColor="#000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="4"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_pill"
+        android:paddingLeft="14dp"
+        android:paddingTop="5dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="5dp"
+        android:textColor="#03DAC5"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
-    <LinearLayout
+    <!-- Kontrol barı ve 1 dk uyarısı bu katmanın altına eklenir -->
+
+    <FrameLayout
         android:id="@+id/fakeSleepLayer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#000000"
-        android:orientation="vertical"
-        android:visibility="gone" />
+        android:clickable="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvSleepHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Uyku modu  •  Devam etmek için kumandada bir tuşa basın"
+            android:textColor="#6B7380"
+            android:textSize="16sp" />
+    </FrameLayout>
 
 </FrameLayout>

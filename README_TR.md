@@ -22,6 +22,16 @@
 
 ---
 
+## 🆕 v1.012 Yenilikleri
+
+- **Tarayıcıdan bağımsız zamanlayıcı:** Süre her uygulamada işler (YouTube uygulaması, Netflix, HDMI...). "İzle" satırından yüklü uygulamalar doğrudan açılabilir.
+- **Her gün belirli saatte kapanma** (ör. 01:00). Kapanmadan 5 dk önce geri sayım başlar; açılışta alarm yeniden kurulur.
+- **Tam ekran tarayıcı + ince kontrol barı** (altta/üstte). Geri tuşu uygulamayı kapatmaz; bar Geri'ye iki kez/uzun basınca veya Menü tuşuyla açılır.
+- **1 dk uyarı paneli** (+15 dk / +30 dk / Şimdi kapat / İptal), kademeli karartma, sesin yavaşça kısılması, medyanın duraklatılması.
+- **Doğrulamalı kapatma zinciri:** her yöntemden sonra ekranın kapandığı kontrol edilir; son denenen yöntem Ayarlar'da gösterilir.
+- **Dişli simgeli Ayarlar sayfası:** izinler, test zamanlayıcısı, ADB komutları, kumanda kısayol tuşu.
+- Güç simgeli uygulama ikonu ve Android TV afişi.
+
 ## 🌟 Öne Çıkan Özellikler
 
 - **⏱️ Hızlı ve Özel Süre Ayarı:**

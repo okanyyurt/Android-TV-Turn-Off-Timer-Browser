@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TV Kapanma Zamanlayıcısı</string>
-    <string name="accessibility_service_description">Bu servis, süre dolduğunda otomatik olarak cihazınızı kapatmak için Güç menüsünü tetikler.</string>
+    <string name="accessibility_service_label">TV Kapanma Zamanlayıcısı – Ekranı kapat</string>
+    <string name="accessibility_service_description">Bu servis, zamanlayıcı süresi dolduğunda ekranı kapatır; \"Tamamen kapat\" seçiliyse Güç menüsünü açıp Kapat düğmesine basar. Ayrıca ayarlarda seçtiğiniz tek bir kumanda tuşuna uzun/çift basıldığında zamanlayıcı barını açar. Diğer tuşlara dokunmaz ve hiçbir tuşu kaydetmez.</string>
 </resources>

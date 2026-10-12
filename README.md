@@ -22,6 +22,16 @@
 
 ---
 
+## 🆕 What's New in v1.012
+
+- **Browser-independent timer:** runs while any app is open (YouTube app, Netflix, HDMI...). Installed apps can be launched from the "Watch" row.
+- **Daily shutdown at a fixed time** (e.g. 01:00). Countdown starts 5 min before; the alarm is re-armed on boot.
+- **Fullscreen browser + slim control bar** (top/bottom). Back no longer exits the app; the bar opens with double/long Back or the Menu key.
+- **1-minute warning panel** (+15 / +30 min / Turn off now / Cancel), gradual dimming, volume fade-out, media pause.
+- **Verified power-off chain:** screen state is checked after each method; the last attempted method is shown in Settings.
+- **Gear-icon Settings page:** permissions, test timer, ADB commands, remote shortcut key.
+- Power-symbol app icon and Android TV banner.
+
 ## 🌟 Key Features
 
 - **⏱️ Quick & Custom Timers:**
